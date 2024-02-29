@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
 import Island from '../models/Island';
+import Sky from '../models/Sky';
 const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
@@ -30,15 +31,15 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight />
-          <ambientLight />
-          <pointLight />
+          <directionalLight intensity={1} position={[1, 1, 1]} />
+          <ambientLight intensity={0.5} />
+          <Sky />
           <Island
             scale={islandScale}
             position={islandPosition}
             rotation={rotation}
           />
-          <hemisphereLight />
+          <hemisphereLight groundColor="#000000" />
         </Suspense>
       </Canvas>
     </section>
