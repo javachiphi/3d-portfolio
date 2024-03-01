@@ -2,8 +2,10 @@ import React, { useState, useRef, Suspense } from 'react';
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
+import Alert from '../components/Alert';
 
 import Fox from '../models/Fox';
+import useAlert from '../hooks/useAlert';
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -11,6 +13,7 @@ const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [currentAnimation, setCurrentAnimation] = useState('idle');
 
+  const { alert, showAlert, hideAlert } = useAlert();
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -40,6 +43,10 @@ const Contact = () => {
       )
       .then(() => {
         setIsLoading(false);
+        showAlert({
+          text: 'Message sent successfully',
+          type: 'success',
+        });
 
         setTimeout(() => {
           setCurrentAnimation('idle');
@@ -50,11 +57,16 @@ const Contact = () => {
         setIsLoading(false);
         setCurrentAnimation('idle');
         console.log(error);
+        showAlert({
+          text: "the message wasn't sent, please try again.",
+          type: 'danger',
+        });
       });
   };
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in touch</h1>
         <form
