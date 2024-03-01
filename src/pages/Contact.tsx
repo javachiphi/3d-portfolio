@@ -125,27 +125,27 @@ const Contact = () => {
             {isLoading ? 'Sending..' : 'Send Message'}
           </button>
         </form>
-        <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-          <Canvas
-            camera={{
-              position: [0, 0, 5],
-              fov: 75,
-              near: 0.1,
-              far: 1000,
-            }}
-          >
-            <directionalLight intensity={2.5} position={[0, 0, 1]} />
-            <directionalLight intensity={0.5} />
-            <Suspense fallback={<Loader />}>
-              <Fox
-                currentAnimation={currentAnimation}
-                position={[0.5, 0.35, 0]}
-                rotation={[12.6, -0.6, 0]}
-                scale={[0.5, 0.5, 0.5]}
-              />
-            </Suspense>
-          </Canvas>
-        </div>
+      </div>
+      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+        <Canvas
+          camera={{
+            position: [0, 0, 5],
+            fov: 75,
+            near: 0.1,
+            far: 1000,
+          }}
+        >
+          <directionalLight intensity={2.5} position={[0, 0, 1]} />
+          <directionalLight intensity={0.5} />
+          <Suspense fallback={<Loader />}>
+            <Fox
+              currentAnimation={currentAnimation}
+              position={[0.5, 0.35, 0]}
+              rotation={[12.6, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
+            />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   );
