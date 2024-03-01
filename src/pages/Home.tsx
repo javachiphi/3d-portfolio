@@ -12,18 +12,16 @@ import sakura from '../assets/sakura.mp3';
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
+  audioRef.current.volume = 0.1;
   audioRef.current.loop = true;
 
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(true);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   useEffect(() => {
     if (isPlayingMusic) {
       audioRef.current.play();
-    } else {
-      audioRef.current.pause();
     }
 
     return () => {
