@@ -5,7 +5,12 @@ import { useFrame, useThree } from '@react-three/fiber';
 
 import islandScene from '../assets/3d/island.glb';
 
-export default function Island({ isRotating, setIsRotating, ...props }) {
+export default function Island({
+  isRotating,
+  setIsRotating,
+  setCurrentStage,
+  ...props
+}) {
   const islandRef = useRef();
 
   const { gl, viewport } = useThree();
