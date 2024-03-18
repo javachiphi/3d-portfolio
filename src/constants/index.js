@@ -164,7 +164,7 @@ export const projects = [
     name: 'App: AI photo editing',
     description:
       ' Built SaaS photo editing app using Cloudinary Generative AI’s APIs',
-    link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+    link: 'https://github.com/javachiphi/photo-studio',
   },
   {
     iconUrl: car,
@@ -172,7 +172,7 @@ export const projects = [
     name: 'App: Urban Exploration',
     description:
       'Built a map-based urban exploration app that allows users to find and share hidden gems in their city',
-    link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+    link: 'https://github.com/javachiphi/urbanx',
   },
   {
     iconUrl: pricewise,
