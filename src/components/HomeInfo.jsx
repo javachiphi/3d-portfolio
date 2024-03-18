@@ -21,14 +21,14 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="I love thinking about how to create "
+      text="I am excited about building value-packed features that drive user retention and engagement."
       link="/about"
-      btnText="Visit Sophie's CV"
+      btnText="Check CV"
     />
   ),
   3: (
     <InfoBox
-      text="I enjoy building projects with the latest technologies"
+      text="I enjoy delightful UIUX, product thinking, and project building"
       link="/projects"
       btnText="Visit my portfolio"
     />

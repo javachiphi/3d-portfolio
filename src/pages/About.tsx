@@ -37,7 +37,11 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate500">
         <p>
-          I am a product-minded software engineer & technical product manager.
+          Hello, I am an engineer and a product manager. I enjoy diving deep
+          into user journey and the impact that features can deliever. I toggle
+          between engineering and product, so that I could be quicker and better
+          at evaluating trade-offs. Before tech, I was in public policy working
+          at Johns Hopkins-SAIS and United Nations Development Programme.
         </p>
       </div>
       <div className="py-10 flex flex-col">
