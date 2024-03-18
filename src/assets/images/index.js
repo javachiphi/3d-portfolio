@@ -1,15 +1,7 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
+import hero from './hero.jpg';
+import logo from './logo.svg';
+import ninety from './ninety.png';
+import kernel from './kernel-icon.png';
+import ef from './ef.jpeg';
 
-export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
-}
+export { hero, logo, ninety, kernel, ef };

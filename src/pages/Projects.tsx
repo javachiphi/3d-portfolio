@@ -14,7 +14,7 @@ const Projects = () => {
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate500">
-        <p>work on multiple projects. </p>
+        {/* <p>  </p> */}
       </div>
 
       <div className="mt-5 flex flex-wrap my-20 gap-16">
@@ -38,12 +38,12 @@ const Projects = () => {
             </div>
             <div className="mt-5 flex items-center gap-2 font-poppins">
               <Link
-                to={`/projects/${project.id}`}
+                to={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-blue-600"
               >
-                Live Link
+                Learn More
               </Link>
               <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
             </div>
